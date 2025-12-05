@@ -1,4 +1,4 @@
-# STM-api-etl-pipeline
+# Building a Real-Time ETL Pipeline from STM’s Open Data API
 ## Overview
 
 This project demonstrates a fully automated real-time ETL data pipeline that retrieves live metro service status from the STM Open Data API, processes the JSON stream using FME Workbench, and updates a PostgreSQL/PostGIS database used for transit analysis.
