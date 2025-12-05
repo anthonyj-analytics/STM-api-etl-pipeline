@@ -9,20 +9,29 @@ Although compact, this project showcases a complete end-to-end pipeline: API acq
 
 ## Abilities Demonstrated
 
-• API authentication and ingestion
+• **API authentication and ingestion**
+
 Connection to the STM iBUS “État du Service” API, using API keys, authentication headers, and an OpenAPI specification to configure the HTTP request. The system retrieves real-time service alerts for Montreal’s metro network.
 
-• JSON parsing and transformation
+• **JSON parsing and transformation**
+
 Using FME components—HTTPCaller, JSONFormatter, JSONFragmenter, and JSONExtractor—the pipeline isolates the relevant JSON nodes (alerts, informed entities, messages) and converts them into structured tabular attributes.
 
-• Data filtering and attribute management
+
+• **Data filtering and attribute management**
+
 Logical filtering selects only metro-related alerts (lines 1, 2, 4, 5). Attribute cleaning ensures that only meaningful fields (line, message, info) are stored.
 
-• Automated database integration (PostgreSQL/PostGIS)
+
+• **Automated database integration (PostgreSQL/PostGIS)**
+
 A PostGIS writer pushes the processed alerts into a dedicated SQL table. The resulting dataset can be instantly joined with transit network layers for dashboards, maps, or additional analytics.
 
-• Real-time ETL orchestration
+
+• **Real-time ETL orchestration**
+
 The workflow is designed to run automatically and can provide up-to-date metro service information suitable for operational dashboards.
+
 
 ## Conclusion
 
